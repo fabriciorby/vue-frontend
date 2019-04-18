@@ -12,6 +12,8 @@
       <h4 id="job" class="text-dark font-effect-anaglyph">{{job}}</h4>
       <p>Software Development Analyst</p>
       <p>Computer Science Student (UFABC)</p>
+      <v-icon icon="envelope" aria-hidden="true"></v-icon>
+      fabriciorby@hotmail.com
       <Menu/>
     </div>
   </content>
