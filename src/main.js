@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import crono from 'vue-crono';
+
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -13,6 +15,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faAd, faCoffee, fab)
 
 Vue.component('v-icon', FontAwesomeIcon)
+
+Vue.use(crono);
 
 Vue.use(BootstrapVue)
 

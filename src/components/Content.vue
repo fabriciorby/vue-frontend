@@ -8,8 +8,8 @@
         width="200px"
       >
       <img src="../assets/nave.gif" class="foto-nave img-fluid" height="40px" width="480px">
-      <h1 class="text-dark font-effect-anaglyph">Fabrício Yamamoto</h1>
-      <h4 class="text-dark font-effect-anaglyph">Web Developer</h4>
+      <h1 id="name" class="text-dark font-effect-anaglyph">{{name}}</h1>
+      <h4 id="job" class="text-dark font-effect-anaglyph">{{job}}</h4>
       <p>Software Development Analyst</p>
       <p>Computer Science Student (UFABC)</p>
       <Menu/>
@@ -20,28 +20,49 @@
 <script>
 import Menu from "./Menu.vue";
 
+const nameList = ["Fabrício Yamamoto", "山本　ファブリシオ"];
+const jobList = ["Web Developer", "Web Developer"];
+let i = 0;
+
 export default {
   name: "Content",
   components: {
     Menu
+  },
+  data: function() {
+    return { name: undefined, job: undefined };
+  },
+  mounted() {
+    this.change()
+  },
+  methods: {
+    change: function() {
+      this.name = nameList[i];
+      this.job = jobList[i];
+      i = i ? 0 : 1;
+    }
+  },
+  cron: {
+    time: 5000,
+    method: "change"
   }
 };
 </script>
 
 <style scoped>
-@media only screen and (max-width:750px) {
-    .container-fluid {
-        width: 95% !important;
-    }
-    h1 {
-      font-size: 30px;
-    }
-    h4 {
-      font-size: 20px;
-    }
-    p {
-      font-size: 15px;
-    }
+@media only screen and (max-width: 750px) {
+  .container-fluid {
+    width: 95% !important;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
 }
 p {
   margin: 0;
