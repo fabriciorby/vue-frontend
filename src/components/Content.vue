@@ -23,7 +23,7 @@
 import Menu from "./Menu.vue";
 
 const nameList = ["Fabrício Yamamoto", "山本　ファブリシオ"];
-const jobList = ["Web Developer", "Web Developer"];
+const jobList = ["Web Developer", "ウェブディベロッパ"];
 let i = 0;
 
 export default {
@@ -45,7 +45,7 @@ export default {
     }
   },
   cron: {
-    time: 5000,
+    time: 7000,
     method: "change"
   }
 };

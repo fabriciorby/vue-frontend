@@ -1,5 +1,7 @@
-# Welcome to my Portfolio Website 😂👌🔝
+# Welcome to my Website 😂👌🔝
 
 http://fabriciorby.me
 
-just a jekyll based website with a good-looking customized [bootstrap theme](https://github.com/jeromelachaud/freelancer-theme).
+Primeira vez mexendo com Vuejs tentando fazer um site oldschool.
+
+![Site](./img/18-04-19.gif)
