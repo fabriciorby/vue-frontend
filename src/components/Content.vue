@@ -6,36 +6,44 @@
         class="rounded-circle foto img-fluid"
         height="200px"
         width="200px"
-      >
-      <img src="../assets/nave.gif" class="foto-nave img-fluid" height="40px" width="480px">
+      />
+      <img src="../assets/nave.gif" class="foto-nave img-fluid" height="40px" width="480px" />
       <h1 id="name" class="text-dark font-effect-anaglyph">{{name}}</h1>
       <h4 id="job" class="text-dark font-effect-anaglyph">{{job}}</h4>
-      <p>Software Development Analyst</p>
       <p>Computer Science Student (UFABC)</p>
-      <v-icon icon="envelope" aria-hidden="true"></v-icon>
-      fabriciorby@hotmail.com
-      <Menu/>
+      <p>
+        <v-icon :icon="['fab', 'java']" aria-hidden="true" /> Oracle Certified Associate
+      </p>
+      <p>
+        <v-icon icon="envelope" aria-hidden="true" /> fabriciorby@hotmail.com
+      </p>
+      <Menu />
     </div>
+    <footer>
+      <Counter />
+    </footer>
   </content>
 </template>
 
 <script>
 import Menu from "./Menu.vue";
+import Counter from "./Counter.vue";
 
 const nameList = ["Fabrício Yamamoto", "山本　ファブリシオ"];
-const jobList = ["Web Developer", "ウェブディベロッパ"];
+const jobList = ["Software Engineer", "ソフトウェアエンジニア"];
 let i = 0;
 
 export default {
   name: "Content",
   components: {
-    Menu
+    Menu,
+    Counter
   },
   data: function() {
     return { name: undefined, job: undefined };
   },
   mounted() {
-    this.change()
+    this.change();
   },
   methods: {
     change: function() {
@@ -72,6 +80,7 @@ p {
 .container-fluid {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-content: center;
   width: 70%;
 }
@@ -106,9 +115,13 @@ p {
   z-index: 1;
 }
 .content img {
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */  
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+footer {
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 </style>
