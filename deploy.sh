@@ -9,11 +9,12 @@ cd dist
 echo 'fabriciorby.me' > CNAME
 
 echo '# fabriciorby.me' >> README.md
-echo 'Welcome to my website 😂👌🔝' >> README.md
+echo 'Welcome to my website 😂👌🔝  ' >> README.md
 echo 'http://fabriciorby.me' >> README.md
 
 git init
-git add -A
+git checkout -b master
+git add .
 git commit -m 'deploy'
 git push -f git@github.com:fabriciorby/fabriciorby.github.io.git master
 

@@ -10,6 +10,7 @@
       <img src="../assets/nave.gif" class="foto-nave img-fluid" height="40px" width="480px" />
       <h1 id="name" class="text-dark font-effect-anaglyph">{{name}}</h1>
       <h4 id="job" class="text-dark font-effect-anaglyph">{{job}}</h4>
+      <p>Computer Scientist (UFABC)</p>
       <p>Functional Programming Enthusiast</p>
       <p>
         <v-icon :icon="['fab', 'java']" aria-hidden="true" /> Oracle Certified Professional
